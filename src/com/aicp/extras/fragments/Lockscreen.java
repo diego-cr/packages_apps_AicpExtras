@@ -34,7 +34,7 @@ import com.aicp.gear.util.AicpContextConstants;
 public class Lockscreen extends BaseSettingsFragment {
 
     private static final String FP_SUCCESS_VIBRATION = "fingerprint_success_vib";
-    //private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker";
+    private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker";
     private static final String FOD_COLOR_PICKER_CATEGORY = "fod_color";
 
     private FingerprintManager mFingerprintManager;
@@ -63,13 +63,13 @@ public class Lockscreen extends BaseSettingsFragment {
         }
 
         // FOD category
-/*        PreferenceCategory fodIconPickerCategory = (PreferenceCategory) findPreference(FOD_ICON_PICKER_CATEGORY);
+        PreferenceCategory fodIconPickerCategory = (PreferenceCategory) findPreference(FOD_ICON_PICKER_CATEGORY);
         PackageManager packageManager = getContext().getPackageManager();
         boolean supportsFod = packageManager.hasSystemFeature(AicpContextConstants.Features.FOD);
 
         if (fodIconPickerCategory != null && !supportsFod) {
             fodIconPickerCategory.getParent().removePreference(fodIconPickerCategory);
-        }*/
+        }
 
         // FOD pressed color
         final boolean configfodcolor = getResources().getBoolean(com.android.internal.R.bool.config_fod_color_picker);
